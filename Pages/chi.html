@@ -11,23 +11,57 @@
         rel="stylesheet">
     <title> Fitlife - Calculadora de Controle de hidatração </title>
 </head>
+
 <body style="font-family: Poppins">
     <nav> <!-- tag "nav" = Navegação na página-->
         <a href="../index.html"> Fitlife </a>
         <ul> <!-- Lista não ordenada-->
+            <li><a href="./index.html"> Home</a></li>
             <li><a href="./imc.html"> IMC </a></li> <!-- Itens da lista-->
             <li><a href="./tmb.html"> TMB</a></li>
             <li><a href="./chi.html"> Água</a></li>
         </ul>
-    
+
     </nav>
     <main>
         <section>
             <h3> Calculadora de Hidratação</h3>
-            <p> Em breve você conseguirá usar a calculadora de Hidratação aqui!</p>
-            <a href="../index.html"> Voltar a página inicial</a> <!-- Cada "../" serve pra voltar uma pasta-->
-    </section>
+            <p> Meta diária: 2500ml</p>
+            <form action="">
+
+                <div>
+                    <button>+ 250ml</button>
+                    <button>Zerar</button>
+                </div>
+
+                <p>Progresso</p>
+
+                <p> Total: 0 ml</p>
+
+                <!-- <form action="">
+                    <label for="nome"> Digite o seu nome: </label>  "Label é usado para criar um rótulo para o input, e o "for" serve para vincular o label ao input, assim quando o usuário clicar no label, o input será selecionado. Basicamente, a qual input pertence esse Label"
+                    <input type="text" placeholder="Digite o seu nome" id="nome">  "Input é para criar um campo onde o usuário insere informações, como textos, números, arquivos, etc"
+    
+                    <label for="course-input"> Selecione o seu curso: </label>
+                    <select name="course-input" id="course-input">  "Select é usado para criar uma lista suspensa, onde o usuário pode selecionar uma opção"
+                        <option value=""> </option> "Opção vazia como placeholder"
+                        <option value="ADS"> Análise e Desenvolvimento de Sistemas</option> "Opçao com um valor"
+                        <option value="ES" selected> Engenharia de Software</option> "Opção com um valor e selecionada por padrão"
+                        <option value="ADM"> Administração</option>
+                        <option value="Cont"> Contabilidade</option>
+                        <option value="Pisc"> Psicologia</option>
+                    </select>
+                    <button type="reset">Resetar</button>
+                    <button type="submit">Enviar</button>
+                </form>
+                    <button type="submit">Enviar</button> O submit é usado para enviar o formulário, mas é apenas necessário se não houver um botão de submit dentro do formulário -->
+
+                <a href="../index.html"> Voltar a página inicial</a> <!-- Cada "../" serve pra voltar uma pasta-->
+        </section>
     </main>
+    <footer> <!-- Rodapé da página-->
+        <p>© 2026, Fitlife</p>
+    </footer>
 </body>
 
 </html>
