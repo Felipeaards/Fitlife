@@ -1,0 +1,10 @@
+p {
+    /* Esse é o nome da Tag html, o Seletor */
+    color: #fff
+        /* Color é a propriedade, e #fff é o valor */
+
+}
+
+a {
+    color: rgb(102, 12, 82)
+}
