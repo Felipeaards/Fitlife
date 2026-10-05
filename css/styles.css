@@ -1,0 +1,37 @@
+body {
+    background-color: #f0f2f5;
+    font-family: Poppins;
+}
+
+nav {
+    background-color: #Fff;
+    color: #00B894;
+    /* Está sendo aplicada apenas para as tags "ul", pois é filha, mas não pra a "a" */
+    display: flex;
+    /*Coloca os itens um ao lado do outro*/
+    /*Posição do elemento*/
+    widht: 100%;
+    /*Largura, serviu nesse caso para limitar o uso o espaço nos celulares*/
+    justify-content: space-between;
+    /*Posiciona o nosso conteúdo. foi o espaçamento máximo entre as tags dentro do nav*/
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    /*Dá um espaçamento entre os itens*/
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    /*Tira a decoração do texto*/
+}
+
+/* W3School é um site onde tem todas as propriedades de HTML e CSS */
+
+/* CTRL + SPACE aparecem os comandos ou valores */
+/* O CSS sempre aplica a estilização nas tags filhas, netas em diante não */
+/* DRY - Dont Repeat Yourself -> Não fazer códigos redundantes, não repetir */
