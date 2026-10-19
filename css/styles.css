@@ -1,81 +1,115 @@
-* { /* O asterisco é um seletor universal, ele pega todas as tags do HTML */
+* {
+    /* O asterisco é um seletor universal, ele pega todas as tags do HTML */
     margin: 0;
     /*padding: 0 !important;  O !important sobrescreve qualquer outro comando, mesmo que esteja no final do código */
     box-sizing: border-box;
-} /*Esses comandos servem para o site ficar com a mesma formatação em todos os navegadores, pois cada navegador tem uma formatação padrão diferente*/
+}
+
+
+:root {
+    --primary-color: #00b894;
+    --primary-dark: #019477;
+    --secondary-color: #2d3436;
+    --background-color: #f0f2f5;
+    --card-color: #ffffff;
+    --text-color: #333333;
+    --muted-color: #636e72;
+    --danger-color: #d63031;
+    --water-color: #0984e3;
+    --border-color: #dfe6e9;
+}
+
+/*Esses comandos servem para o site ficar com a mesma formatação em todos os navegadores, pois cada navegador tem uma formatação padrão diferente*/
 /*css lê de cima para baixo, então se colocar um comando no final ele vai sobrescrever o que está no começo*/
 
 body {
-    background-color: #f0f2f5;
+    background-color: var(--background-color);
     font-family: Poppins;
 }
+
 /* Toda tag css contém classe e id, mas não é obrigatório colocar, pois se não colocar ele vai pegar a tag do HTML, mas se colocar ele vai pegar a classe ou id que está no HTML */
 /* Classe utilizamos a mesma estilização em várias tags, já o id é único, só pode ser usado uma vez no HTML */
 /* o "." indica que é uma classe, já o "#" indica que é um id */
 
-.logo {/*Pode replicar, por boas práticas*/
-    color: #00B894;
+.logo {
+    /*Pode replicar, por boas práticas*/
+    color: var(--primary-color);
 }
 
-#logo { /*Não pode replicar, por boas práticas*/
-    color: #00B894;
-    font-size: 24px;
+#logo {
+    /*Não pode replicar, por boas práticas*/
+    color: var(--primary-color);
+    font-size: 1.5rem;
     text-decoration: none;
-    font-weight: 600;
-    display: flex;       /* Ativa o flexbox para alinhar os itens internos */
-    align-items: center; /* Centraliza o ícone e o texto no eixo vertical */
-    gap: 8px;            /* Adiciona um pequeno espaço entre o ícone e a palavra */
+    font-weight: 600px;
+    display: flex;
+    /* Ativa o flexbox para alinhar os itens internos */
+    align-items: center;
+    /* Centraliza o ícone e o texto no eixo vertical */
+    gap: 0.5rem;
+    /* Adiciona um pequeno espaço entre o ícone e a palavra */
 }
 
-.nav-links{
-    display: flex; /*Coloca os itens um ao lado do outro*/
-    list-style: none; /*Tira a bolinha da lista*/
-    gap: 24px; /*Dá um espaçamento entre os itens*/
+.nav-links {
+    display: flex;
+    /*Coloca os itens um ao lado do outro*/
+    list-style: none;
+    /*Tira a bolinha da lista*/
+    gap: 1.5rem;
+    /*Dá um espaçamento entre os itens*/
 }
 
 .nav-link {
-    color: #2d3436;
+    color: var(--secondary-color);
     text-decoration: none;
-    font-size: 16px;
-    transition: all 0.3s ease; /*Faz a transição de uma cor para outra, nesse caso da cor preta para azul*/
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    /*Faz a transição de uma cor para outra, nesse caso da cor preta para azul*/
 }
 
 .nav-links.active {
-    color: #00B894;
+    color: var(--primary-color);
     font-weight: 600;
-    border-bottom: 2px solid #00B894;
+    border-bottom: 2px solid var(--primary-color);
 }
 
 /*Pseudo-classes são classes que só existem no CSS, não existe no HTML e representadas por ":" (dois pontos), mas podemos aplicar em tags do HTML*/
 
 .nav-link:hover {
-    color:blue;
+    color: var(--water-color);
 }
 
 .header-container {
-    text-align: center; /*Centraliza o texto*/
-    padding: 40px 0; /*Espaçamento interno do elemento, nesse caso no header, o primeiro valor é o espaçamento vertical e o segundo é o horizontal*/
+    text-align: center;
+    /*Centraliza o texto*/
+    padding: 2.5rem 0;
+    /*Espaçamento interno do elemento, nesse caso no header, o primeiro valor é o espaçamento vertical e o segundo é o horizontal*/
 }
 
 .header-container h1 {
-    font-size: 40px;
+    font-size: 2.5rem;
 }
 
 .header-container span {
-    color: #00B894;
+    color: var(--primary-color);
 }
 
 nav {
 
-    display: flex; /*Coloca os itens um ao lado do outro*/
-    justify-content: space-between; /*Posiciona o nosso conteúdo. foi o espaçamento máximo entre as tags dentro do nav*/   
-    align-items: center; /*Posição do elemento na configuração vertical */
+    display: flex;
+    /*Coloca os itens um ao lado do outro*/
+    justify-content: space-between;
+    /*Posiciona o nosso conteúdo. foi o espaçamento máximo entre as tags dentro do nav*/
+    align-items: center;
+    /*Posição do elemento na configuração vertical */
 
-    padding: 0 80px; /*Espaçamento interno do elemento, nesse caso no nav, o primeiro valor é o espaçamento vertical e o segundo é o horizontal*/
+    padding: 0 5rem;
+    /*Espaçamento interno do elemento, nesse caso no nav, o primeiro valor é o espaçamento vertical e o segundo é o horizontal*/
 
-    background-color: #fff;
+    background-color: var(--card-color);
     /*box-shadow: 0px 10px 80px; Cria uma sombra no elemento, nesse caso no nav*/
-    height: 80px; /*Altura do elemento, nesse caso no nav*/
+    height: 5rem;
+    /*Altura do elemento, nesse caso no nav*/
     /*
     background-color: #Fff;
     color: #00B894;
@@ -96,7 +130,7 @@ nav {
 ul {
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 1.25rem;
     /*Dá um espaçamento entre os itens*/
 }
 
@@ -113,32 +147,69 @@ a {
 /* O CSS sempre aplica a estilização nas tags filhas, netas em diante não */
 /* DRY - Dont Repeat Yourself -> Não fazer códigos redundantes, não repetir */
 
-.card{
-    background-color: #fff;
-    padding: 24px;
-    color: #333;
+.card {
+    background-color: var(--card-color);
+    padding: 1.5rem;
+    color: var(--text-color);
     text-decoration: none;
     text-align: center;
-    width: 100%;
-    transition: all 0.3s ease; /*Faz a transição de uma cor para outra, nesse caso da cor preta para azul*/
-    box-shadow: 0px 8px 24px 10px rgba(0, 0, 0, 0.1); /*Cria uma sombra no elemento, nesse caso no card*/
-    border-radius: 8px; /*Arredonda os cantos do elemento, nesse caso no card*/
-}
-.card:hover{
-    border: 5px solid #00B894;
+    width: 100vw;
+    transition: all 0.3s ease;
+    /*Faz a transição de uma cor para outra, nesse caso da cor preta para azul*/
+    box-shadow: 0px 8px 24px 10px rgba(0, 0, 0, 0.1);
+    /*Cria uma sombra no elemento, nesse caso no card*/
+    border-radius: 10px;
+    /*Arredonda os cantos do elemento, nesse caso no card*/
 }
 
-.cards-section{
+.card:hover {
+    border: 5px solid var(--primary-color);
+}
+
+.cards-section {
     display: flex;
-    gap: 24px;
+    gap: 1.5rem;
     text-align: center;
 }
-main{
+
+main {
     width: 800px;
-    margin: 0 auto; /*Centraliza o elemento na tela*/
+    margin: 0 auto;
+    /*Centraliza o elemento na tela*/
 }
+
 .card i {
-    font-size: 48px; /* Aumenta o tamanho do ícone */
-    color: #00B894;  /* Aplica a cor verde característica do seu projeto */
-    margin-bottom: 16px; /* Cria um respiro entre o ícone e o título (h3) */
+    font-size: 3rem;
+    /* Aumenta o tamanho do ícone */
+    color: var(--primary-color);
+    /* Aplica a cor verde característica do seu projeto */
+    margin-bottom: 1rem;
+    /* Cria um respiro entre o ícone e o título (h3) */
 }
+
+
+.exemplo {
+    width: 50rem;
+    margin-top: 1000px;
+    margin: 0 auto;
+    background-color: crimson;
+}
+
+.caixa {
+    background-color: aquamarine;
+    width: 50%;
+    /* % = porcentagem do espaço ocupado. É isso que torna o site responsivo*/
+}
+
+.pai {
+    background-color: #000;
+    width: 800px;
+}
+
+.filha {
+    background-color: aqua;
+    width: 50vw;
+    height: 50vh;
+}
+
+/*  1 REM =  É equivalente ao tamanho da fonte padrão do navegador (16px desktop, 12px celular)

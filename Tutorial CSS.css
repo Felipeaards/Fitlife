@@ -1,10 +1,157 @@
-p {
-    /* Esse é o nome da Tag html, o Seletor */
-    color: #fff
-        /* Color é a propriedade, e #fff é o valor */
+/* ==========================================================================
+   1. FUNDAMENTOS E RESET CSS
+   ========================================================================== */
 
+/* O CSS é lido de cima para baixo: comandos no final podem sobrescrever os anteriores.
+   Princípio DRY (Don't Repeat Yourself): evite códigos redundantes. */
+
+/* O seletor universal (*) pega todas as tags do HTML. 
+   Usado para o Reset CSS: padroniza margens e o comportamento de caixas em todos os navegadores. */
+* {
+    margin: 0;
+    box-sizing: border-box;
 }
 
+/* O !important sobrescreve qualquer outro comando, mesmo que declarado no final do código. */
+/* Ex: padding: 0 !important; */
+
+body {
+    background-color: #f0f2f5;
+    font-family: Poppins;
+    /* Estiliza a tipografia principal da página */
+}
+
+
+/* ==========================================================================
+   2. SELETORES: TAGS, CLASSES E IDS
+   ========================================================================== */
+
+/* Tags HTML aplicam estilos diretamente. O CSS aplica para tags filhas diretas, mas netas em diante não. */
+main {
+    width: 800px;
+    margin: 0 auto;
+    /* Centraliza o elemento horizontalmente na tela */
+}
+
+/* O ponto (.) indica classe: mesma estilização pode ser reutilizada em várias tags (boa prática). */
+.logo {
+    color: #00B894;
+}
+
+/* A cerquilha (#) indica ID: identificador único, só pode ser usado uma vez no HTML. */
+#logo {
+    color: #00B894;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+
+/* ==========================================================================
+   3. LAYOUT COM FLEXBOX
+   ========================================================================== */
+
+nav {
+    display: flex;
+    /* Ativa o Flexbox para colocar os itens um ao lado do outro */
+    justify-content: space-between;
+    /* Distribui o espaço máximo entre as tags dentro do nav */
+    align-items: center;
+    /* Centraliza os elementos no eixo vertical */
+    height: 80px;
+    /* Define a altura do elemento */
+    padding: 0 80px;
+    /* Espaçamento interno: 1º valor = vertical, 2º valor = horizontal */
+    background-color: #fff;
+}
+
+.cards-section {
+    display: flex;
+    gap: 24px;
+    /* Dá um espaçamento uniforme entre os itens */
+    text-align: center;
+}
+
+
+/* ==========================================================================
+   4. ESTILIZAÇÃO DE TEXTOS E LISTAS
+   ========================================================================== */
+
 a {
-    color: rgb(102, 12, 82)
+    color: #000;
+    text-decoration: none;
+    /* Tira a decoração/sublinhado padrão do texto */
+    font-weight: 600;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    /* Tira a bolinha/marcador padrão da lista */
+    gap: 20px;
+}
+
+.header-container {
+    text-align: center;
+    /* Centraliza o texto */
+    padding: 40px 0;
+}
+
+.header-container h1 {
+    font-size: 40px;
+}
+
+.header-container span {
+    color: #00B894;
+}
+
+
+/* ==========================================================================
+   5. PSEUDO-CLASSES E INTERATIVIDADE
+   ========================================================================== */
+
+/* Pseudo-classes só existem no CSS (não no HTML) e são representadas por dois-pontos (:). */
+.nav-link {
+    color: #2d3436;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    /* Faz a transição suave de uma propriedade para outra */
+}
+
+/* :hover é acionado quando o mouse passa por cima do elemento */
+.nav-link:hover {
+    color: blue;
+}
+
+
+/* ==========================================================================
+   6. EFEITOS VISUAIS E COMPONENTES (CARDS)
+   ========================================================================== */
+
+.card {
+    background-color: #fff;
+    padding: 24px;
+    color: #333;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+    border-radius: 8px;
+    /* Arredonda os cantos do elemento */
+    box-shadow: 0px 8px 24px 10px rgba(0, 0, 0, 0.1);
+    /* Cria uma sombra ao redor do elemento */
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    border: 5px solid #00B894;
+}
+
+.card i {
+    /*Aplica essa estilazação do ".card" para qualquer elemento "i" dentro dela*/
+    font-size: 48px;
+    /* Aumenta o tamanho do ícone */
+    color: #00B894;
+    /* Aplica a cor padrão do projeto */
+    margin-bottom: 16px;
+    /* Cria um respiro entre o ícone e o título */
 }
