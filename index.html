@@ -10,7 +10,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+/>
     <link rel="stylesheet" href="./css/styles.css">
     <title> Fitlife </title> <!-- Define o título da página -->
     <!--
@@ -28,31 +29,42 @@
 
 <body>
     <nav> <!-- tag "nav" = Navegação na página-->
-        <a href="./index.html"> Fitlife </a>
+        <a id="logo" href="./index.html"> <i class="fa-solid fa-heart-pulse"></i>Fitlife </a>
         <ul> <!-- Lista não ordenada-->
-            <li><a href="./index.html"> Home</a></li>
-            <li><a href="./Pages/imc.html"> IMC </a></li> <!-- Itens da lista-->
-            <li><a href="./Pages/tmb.html"> TMB</a></li>
-            <li><a href="./Pages/chi.html"> Água</a></li>
+            <li><a class="nav-links active" href="./index.html"> Home</a></li>
+            <li><a class="nav-link" href="./Pages/imc.html"> IMC </a></li> <!-- Itens da lista-->
+            <li><a class="nav-link" href="./Pages/tmb.html"> TMB</a></li>
+            <li><a class="nav-link" href="./Pages/chi.html"> Água</a></li>
         </ul>
 
     </nav>
 
 
-    <header> <!-- Declara o cabeçario da página, importante para acessibilidade-->
-        <h1> Bem vindo ao FitLife</h1> <!-- Título principal-->
+    <header class="header-container"> <!-- Declara o cabeçario da página, importante para acessibilidade-->
+        <h1> Bem vindo ao <span>FitLife</span></h1> <!-- Título principal-->
         <p> Seu hub central de saúde. Escolha sua ferramenta</p> <!-- Parágrafo, usado para textos-->
     </header>
-    <h2> Ferramentas Disponíveis:</h2>
 
     <main><!-- O corpo principal do texto, nunca usar outras tags soltas dentro dele -->
-        <section> <!-- Cria uma sessão-->
-            <ul>
-                <li><a href="./Pages/imc.html"> Calculadora de IMC </a></li>
+        <section class="cards-section"> <!-- Cria uma sessão-->
+            
+                <a href="./Pages/imc.html" class="card"> 
+                    <i class="fa-solid fa-weight-scale"></i>
+                    <h3>IMC</h3> 
+                    <p> Calcule o gasto calórico</p>
+                </a>
                 <!-- Nunca usar o caminho completo do arquivo, usar apenas da pasta atual e suas ramificações-->
-                <li> <a href="./Pages/tmb.html"> Calculadora de Taxa Metabólica Basal </a></li>
-                <li> <a href="./Pages/chi.html"> Calculadora de Controle de hidatração </a> </li>
-            </ul>
+                <a href="./Pages/tmb.html" class="card"> 
+                    <i class="fa-solid fa-fire"></i>
+                    <h3>TMB</h3> 
+                    <p> Calcule o gasto calórico</p>
+                </a>
+                <a href="./Pages/chi.html" class="card"> 
+                    <i class="fa-solid fa-droplet"></i>
+                    <h3>Hidratação</h3> 
+                    <p> Calcule a hidratação necessária</p> 
+                </a>
+            
         </section>
 
         <!--
